@@ -11,9 +11,8 @@ router.get('/', (req, res) => {
         .sort({ created: -1 });
 
     findNews.exec((err, data) => {
-        res.render('news', { title: 'News', data });
+        res.render('news', { title: 'News', data, search });
     })
-
 });
 
 module.exports = router;
